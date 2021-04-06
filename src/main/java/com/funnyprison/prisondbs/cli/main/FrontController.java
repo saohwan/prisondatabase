@@ -1,10 +1,14 @@
 package com.funnyprison.prisondbs.cli.main;
 
+import com.funnyprison.prisondbs.cli.prison.controller.PrisonController;
+
 public class FrontController {
     public static void chooseSystem(int selection) {
         switch (selection) {
             case 1:
-                System.out.println("# 죄수 관리 시스템을 시작합니다.");
+//                System.out.println("# 죄수 관리 시스템을 시작합니다.");
+                PrisonController prisonController = new PrisonController();
+                prisonController.start();
                 break;
             case 2:
                 System.out.println("# 형량 관리 시스템을 시작합니다.");
@@ -21,3 +25,6 @@ public class FrontController {
         }
     }
 }
+
+
+

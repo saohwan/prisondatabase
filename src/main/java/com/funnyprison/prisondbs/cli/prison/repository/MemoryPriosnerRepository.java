@@ -21,7 +21,7 @@ public class MemoryPriosnerRepository implements PrisonerRepository {
 //    }
 
     @Override
-    public Prison searchPrisonOne(String name) {
+    public Prison searchPrisonOne(int prisonNumber) {
         return null;
     }
 

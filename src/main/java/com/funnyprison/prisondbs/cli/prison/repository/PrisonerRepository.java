@@ -13,10 +13,10 @@ public interface PrisonerRepository {
 
 
     //죄수 정보 추가
+    void addPrisoner(Prison prison);
 
     //조건별 죄수 검색
 
-    void addPrisoner(Prison prison);
 
     /**
      * @param keyword   검색어
@@ -25,7 +25,7 @@ public interface PrisonerRepository {
      */
 //    List<Prison> searchMovieList(String keyword, SearchCondition condition);
 
-    //특정 죄수 1명 검색
+    /*//특정 죄수 1명 검색
     default Prison searchPrisonOne(String name) {
         return null;
     }
@@ -33,5 +33,15 @@ public interface PrisonerRepository {
     //특정 죄수 삭제(출소)
     void removePrison(int prisonerlNumber);
 
-    List<Prison> search(String keyword, SearchCondition condition);
+    List<Prison> search(String keyword, SearchCondition condition);*/
+
+    List<Prison> searchPrisonerList(String keyword, SearchCondition condition);
+
+    //특정 수감자 1명 검색
+    default Prison searchPrisonOne(int prisonerNumber) {
+        return null;
+    }
+
+    //특정 수감자 삭제(출소)
+    void removePrison(int serialNumber);
 }
